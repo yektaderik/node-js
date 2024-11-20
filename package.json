@@ -1,0 +1,27 @@
+{
+    "name": "yekta.derik",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+        "test": "jest --runInBand",
+        "dev": "nodemon index.js"
+    },
+    "keywords": [],
+    "author": "yekta.derik",
+    "license": "ISC",
+    "description": "",
+    "dependencies": {
+        "@fastify/swagger": "^9.2.0",
+        "@fastify/swagger-ui": "^5.1.0",
+        "chalk": "^4.0.0",
+        "fastify": "^5.1.0",
+        "fastify-swagger": "^5.1.1",
+        "mongoose": "^8.8.1"
+    },
+    "devDependencies": {
+        "axios": "^1.7.7",
+        "jest": "^29.7.0",
+        "nodemon": "^3.1.7"
+    }
+}
+

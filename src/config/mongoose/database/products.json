@@ -1,0 +1,194 @@
+[
+  {
+    "Name": "1",
+    "GroupName": "men clothing",
+    "CategoryName": "the shirt",
+    "Price": 100
+  },
+  {
+    "Name": "2",
+    "GroupName": "men clothing",
+    "CategoryName": "pants",
+    "Price": 200
+  },
+  {
+    "Name": "3",
+    "GroupName": "men clothing",
+    "CategoryName": "shoes",
+    "Price": 300
+  },
+  {
+    "Name": "4",
+    "GroupName": "men clothing",
+    "CategoryName": "socks",
+    "Price": 400
+  },
+  {
+    "Name": "5",
+    "GroupName": "women clothing",
+    "CategoryName": "the shirt",
+    "Price": 500
+  },
+  {
+    "Name": "6",
+    "GroupName": "women clothing",
+    "CategoryName": "pants",
+    "Price": 600
+  },
+  {
+    "Name": "7",
+    "GroupName": "women clothing",
+    "CategoryName": "shoes",
+    "Price": 700
+  },
+  {
+    "Name": "8",
+    "GroupName": "women clothing",
+    "CategoryName": "socks",
+    "Price": 800
+  },
+  {
+    "Name": "9",
+    "GroupName": "baby clothing",
+    "CategoryName": "the shirt",
+    "Price": 900
+  },
+  {
+    "Name": "10",
+    "GroupName": "baby clothing",
+    "CategoryName": "pants",
+    "Price": 1000
+  },
+  {
+    "Name": "11",
+    "GroupName": "baby clothing",
+    "CategoryName": "shoes",
+    "Price": 1100
+  },
+  {
+    "Name": "12",
+    "GroupName": "men sport",
+    "CategoryName": "sport clothing",
+    "Price": 1200
+  },
+  {
+    "Name": "13",
+    "GroupName": "men sport",
+    "CategoryName": "sport clothing",
+    "Price": 1300
+  },
+  {
+    "Name": "14",
+    "GroupName": "men sport",
+    "CategoryName": "sport clothing",
+    "Price": 1400
+  },
+  {
+    "Name": "15",
+    "GroupName": "women sport",
+    "CategoryName": "sport clothing",
+    "Price": 1500
+  },
+  {
+    "Name": "16",
+    "GroupName": "women sport",
+    "CategoryName": "sport clothing",
+    "Price": 1600
+  },
+  {
+    "Name": "17",
+    "GroupName": "women sport",
+    "CategoryName": "sport clothing",
+    "Price": 1700
+  },
+  {
+    "Name": "18",
+    "GroupName": "women sport",
+    "CategoryName": "sport clothing",
+    "Price": 1800
+  },
+  {
+    "Name": "19",
+    "GroupName": "baby sport",
+    "CategoryName": "sport clothing",
+    "Price": 1900
+  },
+  {
+    "Name": "20",
+    "GroupName": "baby sport",
+    "CategoryName": "sport clothing",
+    "Price": 2000
+  },
+  {
+    "Name": "21",
+    "GroupName": "baby sport",
+    "CategoryName": "sport clothing",
+    "Price": 3000
+  },
+  {
+    "Name": "22",
+    "GroupName": "baby sport",
+    "CategoryName": "sport clothing",
+    "Price": 4000
+  },
+  {
+    "Name": "23",
+    "GroupName": "accessory",
+    "CategoryName": "accessory",
+    "Price": 5000
+  },
+  {
+    "Name": "24",
+    "GroupName": "accessory",
+    "CategoryName": "accessory",
+    "Price": 6000
+  },
+  {
+    "Name": "25",
+    "GroupName": "accessory",
+    "CategoryName": "accessory",
+    "Price": 7000
+  },
+  {
+    "Name": "26",
+    "GroupName": "accessory",
+    "CategoryName": "accessory",
+    "Price": 8000
+  },
+  {
+    "Name": "27",
+    "GroupName": "accessory",
+    "CategoryName": "accessory",
+    "Price": 9000
+  },
+  {
+    "Name": "28",
+    "GroupName": "accessory",
+    "CategoryName": "accessory",
+    "Price": 10000
+  },
+  {
+    "Name": "29",
+    "GroupName": "accessory",
+    "CategoryName": "accessory",
+    "Price": 11000
+  },
+  {
+    "Name": "30",
+    "GroupName": "gift pack",
+    "CategoryName": "gift pack",
+    "Price": 12000
+  },
+  {
+    "Name": "31",
+    "GroupName": "gift pack",
+    "CategoryName": "gift pack",
+    "Price": 13000
+  },
+  {
+    "Name": "32",
+    "GroupName": "gift pack",
+    "CategoryName": "gift pack",
+    "Price": 14000
+  }
+]

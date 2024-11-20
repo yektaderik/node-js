@@ -1,0 +1,66 @@
+[
+    {
+        "Name": "the shirt",
+        "GroupName": "men clothing"
+    },
+    {
+        "Name": "pants",
+        "GroupName": "men clothing"
+    },
+    {
+        "Name": "shoes",
+        "GroupName": "men clothing"
+    },
+    {
+        "Name": "socks",
+        "GroupName": "men clothing"
+    },
+    {
+        "Name": "the shirt",
+        "GroupName": "women clothing"
+    },
+    {
+        "Name": "pants",
+        "GroupName": "women clothing"
+    },
+    {
+        "Name": "shoes",
+        "GroupName": "women clothing"
+    },
+    {
+        "Name": "socks",
+        "GroupName": "women clothing"
+    },
+    {
+        "Name": "the shirt",
+        "GroupName": "baby clothing"
+    },
+    {
+        "Name": "pants",
+        "GroupName": "baby clothing"
+    },
+    {
+        "Name": "shoes",
+        "GroupName": "baby clothing"
+    },
+    {
+        "Name": "men sport",
+        "GroupName": "sport clothing"
+    },
+    {
+        "Name": "women sport",
+        "GroupName": "sport clothing"
+    },
+    {
+        "Name": "baby sport",
+        "GroupName": "sport clothing"
+    },
+    {
+        "Name": "accessory",
+        "GroupName": "accessory"
+    },
+    {
+        "Name": "gift",
+        "GroupName": "gift pack"
+    }
+]

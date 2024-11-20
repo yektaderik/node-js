@@ -1,0 +1,476 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "API Documentation",
+        "description": "API documentation for final project",
+        "version": "1.0.0"
+    },
+    "definitions": {},
+    "paths": {
+        "/group/add": {
+            "post": {
+                "summary": "Add a new group",
+                "description": "This endpoint allows you to add a new group with a specified name. The group will be created in the system.",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "groupName": {
+                                    "type": "string",
+                                    "default": "test",
+                                    "description": "The name of the group to be added"
+                                }
+                            },
+                            "required": ["groupName"]
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": { "description": "Group added successfully" }
+                }
+            }
+        },
+        "/category/add": {
+            "post": {
+                "summary": "Add a new category",
+                "description": "This endpoint allows you to add a new category under a specified group.",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "categoryName": {
+                                    "type": "string",
+                                    "default": "razer",
+                                    "description": "The name of the category to be added"
+                                },
+                                "groupName": {
+                                    "type": "string",
+                                    "default": "laptop",
+                                    "description": "The name of the group under which this category will be added"
+                                }
+                            },
+                            "required": ["categoryName"]
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": { "description": "Category added successfully" }
+                }
+            }
+        },
+        "/group/": {
+            "get": {
+                "summary": "Get all groups",
+                "description": "This endpoint retrieves the names of all groups available in the system.",
+                "responses": {
+                    "200": { "description": "A list of all groups" }
+                }
+            }
+        },
+        "/group/{groupName}/{query}": {
+            "get": {
+                "summary": "Get a group by name and query",
+                "description": "This endpoint retrieves information for a specified group and query. It allows you to query specific details within a group.",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "required": true,
+                        "in": "path",
+                        "name": "groupName",
+                        "default" : "laptop",
+                        "description": "The name of the group"
+                    },
+                    {
+                        "type": "string",
+                        "required": true,
+                        "in": "path",
+                        "name": "query",
+                        "default" : "mac",
+                        "description": "A query parameter to filter or search within the group"
+                    }
+                ],
+                "responses": {
+                    "200": { "description": "Group and query results" }
+                }
+            }
+        },
+        "/group/change-name": {
+            "put": {
+                "summary": "Change the name of a group",
+                "description": "This endpoint allows you to change the name of an existing group in the system.",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "groupNewName": {
+                                    "type": "string",
+                                    "default": "all in one",
+                                    "description": "The new name of the group"
+                                },
+                                "groupOldName": {
+                                    "type": "string",
+                                    "default": "badNameGroup",
+                                    "description": "The current name of the group to be changed"
+                                }
+                            },
+                            "required": ["groupNewName", "groupOldName"]
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": { "description": "Group name updated successfully" }
+                }
+            }
+        },
+        "/group/remove": {
+            "delete": {
+                "summary": "Remove a group",
+                "description": "This endpoint allows you to remove a specified group from the system.",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "groupName": {
+                                    "type": "string",
+                                    "default": "sampleGroup",
+                                    "description": "The name of the group to be removed"
+                                }
+                            },
+                            "required": ["groupName"]
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": { "description": "Group removed successfully" }
+                }
+            }
+        },
+        "/category/": {
+            "get": {
+                "summary": "Get all categories",
+                "description": "This endpoint retrieves a list of all categories in the system.",
+                "responses": {
+                    "200": { "description": "A list of all categories" }
+                }
+            }
+        },
+        "/category/{categoryName}/{query}": {
+            "get": {
+                "summary": "Get a category by name and query",
+                "description": "This endpoint retrieves information for a specified category and query. It allows you to query specific details within a category.",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "required": true,
+                        "in": "path",
+                        "name": "categoryName",
+                        "default" : "apple",
+                        "description": "The name of the category"
+                    },
+                    {
+                        "type": "string",
+                        "required": true,
+                        "in": "path",
+                        "name": "query",
+                        "default" : "mac",
+                        "description": "A query parameter to filter or search within the category"
+                    }
+                ],
+                "responses": {
+                    "200": { "description": "Category and query results" }
+                }
+            }
+        },
+        "/category/{categoryName}": {
+            "get": {
+                "summary": "Get a specific category",
+                "description": "This endpoint retrieves information about a specific category by its name.",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "required": true,
+                        "in": "path",
+                        "name": "categoryName",
+                        "default" : "apple",
+                        "description": "The name of the category"
+                    }
+                ],
+                "responses": {
+                    "200": { "description": "Category details" }
+                }
+            }
+        },
+        "/category/change-name": {
+            "put": {
+                "summary": "Change the name of a category",
+                "description": "This endpoint allows you to change the name of an existing category in the system.",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "categoryNewName": {
+                                    "type": "string",
+                                    "default": "ps2",
+                                    "description": "The new name of the category"
+                                },
+                                "categoryOldName": {
+                                    "type": "string",
+                                    "default": "badNameCategory",
+                                    "description": "The current name of the category to be changed"
+                                }
+                            },
+                            "required": ["categoryNewName", "categoryOldName"]
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Category name updated successfully"
+                    }
+                }
+            }
+        },
+        "/category/remove": {
+            "delete": {
+                "summary": "Remove a category",
+                "description": "This endpoint allows you to remove a specific category from the system.",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "categoryName": {
+                                    "type": "string",
+                                    "default": "sampleCategory",
+                                    "description": "The name of the category to be removed"
+                                }
+                            },
+                            "required": ["categoryName"]
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": { "description": "Category removed successfully" }
+                }
+            }
+        },
+        "/product/add": {
+            "post": {
+                "summary": "Add a new product",
+                "description": "This endpoint allows you to add a new product with a specified name, price, and category.",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "productName": {
+                                    "type": "string",
+                                    "default": "test product",
+                                    "description": "The name of the product"
+                                },
+                                "productPrice": {
+                                    "type": "string",
+                                    "default": "1000",
+                                    "description": "The price of the product"
+                                },
+                                "productCategory": {
+                                    "type": "string",
+                                    "default": "asus",
+                                    "description": "The category of the product"
+                                }
+                            },
+                            "required": [
+                                "productName",
+                                "productPrice",
+                                "productCategory"
+                            ]
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": { "description": "Product added successfully" }
+                }
+            }
+        },
+        "/product/{categoryName}": {
+            "get": {
+                "summary": "Get products by category",
+                "description": "This endpoint retrieves a list of products within a specific category.",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "required": true,
+                        "in": "path",
+                        "name": "categoryName",
+                        "default" : "CPU",
+                        "description": "The category name"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Products in the specified category"
+                    }
+                }
+            }
+        },
+        "/product/change-name": {
+            "put": {
+                "summary": "Change the name of a product",
+                "description": "This endpoint allows you to change the name of an existing product in the system.",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "productNewName": {
+                                    "type": "string",
+                                    "default": "good product name",
+                                    "description": "The new name of the product"
+                                },
+                                "productOldName": {
+                                    "type": "string",
+                                    "default": "badProductName",
+                                    "description": "The current name of the product"
+                                }
+                            },
+                            "required": ["productNewName", "productOldName"]
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Product name updated successfully"
+                    }
+                }
+            }
+        },
+        "/product/change-price": {
+            "put": {
+                "summary": "Change the price of a product",
+                "description": "This endpoint allows you to update the price of an existing product.",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "productName": {
+                                    "type": "string",
+                                    "default": "badPriceProduct",
+                                    "description": "The name of the product"
+                                },
+                                "productNewPrice": {
+                                    "type": "string",
+                                    "default": "1300",
+                                    "description": "The new price of the product"
+                                }
+                            },
+                            "required": ["productName", "productNewPrice"]
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Product price updated successfully"
+                    }
+                }
+            }
+        },
+        "/product/change-category": {
+            "put": {
+                "summary": "Change the category of a product",
+                "description": "This endpoint allows you to update the category of an existing product.",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "productName": {
+                                    "type": "string",
+                                    "default": "badCategoryProduct",
+                                    "description": "The name of the product"
+                                },
+                                "productNewCategory": {
+                                    "type": "string",
+                                    "default": "asus",
+                                    "description": "The new category of the product"
+                                }
+                            },
+                            "required": ["productName", "productNewCategory"]
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Product category updated successfully"
+                    }
+                }
+            }
+        },
+        "/product/remove": {
+            "delete": {
+                "summary": "Remove a product",
+                "description": "This endpoint allows you to remove a product from the system.",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "productName": {
+                                    "type": "string",
+                                    "default": "sampleProductForRemove",
+                                    "description": "The name of the product to be removed"
+                                }
+                            },
+                            "required": ["productName"]
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": { "description": "Product removed successfully" }
+                }
+            }
+        }
+    },
+    "host": "localhost:3000",
+    "schemes": ["http"],
+    "consumes": ["application/json"],
+    "produces": ["application/json"]
+}
